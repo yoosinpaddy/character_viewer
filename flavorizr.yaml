@@ -1,0 +1,31 @@
+flavors:
+  simpsons:
+    app:
+      name: "Simpsons Character Viewer"
+
+    android:
+      applicationId: "om.sample.simpsonsviewer"
+      resValues:
+        BASE_URL:
+          type: "string"
+          value: "example variable one"
+    ios:
+      bundleId: "com.sample.simpsonsviewer"
+      variables:
+        BASE_URL:
+          value: "variable1"
+  wire:
+    app:
+      name: "The Wire Character Viewer"
+
+    android:
+      applicationId: "com.sample.wireviewer"
+      resValues:
+        BASE_URL:
+          type: "string"
+          value: "example variable one"
+    ios:
+      bundleId: "com.sample.wireviewer"
+      variables:
+        BASE_URL:
+          value: "variable1"
