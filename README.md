@@ -1,9 +1,14 @@
-# character_viewer
+# Character Viewer
 
-A character viewer project.
+A character viewer project with two flavors
 
 ## Getting Started
 
+To deploy icons, run 
+```
+flutter pub get
+flutter pub run flutter_launcher_icons
+```
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
