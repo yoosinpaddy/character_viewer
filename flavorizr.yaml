@@ -8,12 +8,12 @@ flavors:
       resValues:
         BASE_URL:
           type: "string"
-          value: "example variable one"
+          value: "http://api.duckduckgo.com/?q=simpsons+characters&format=json"
     ios:
       bundleId: "com.sample.simpsonsviewer"
       variables:
         BASE_URL:
-          value: "variable1"
+          value: "http://api.duckduckgo.com/?q=simpsons+characters&format=json"
   wire:
     app:
       name: "The Wire Character Viewer"
@@ -23,9 +23,9 @@ flavors:
       resValues:
         BASE_URL:
           type: "string"
-          value: "example variable one"
+          value: "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
     ios:
       bundleId: "com.sample.wireviewer"
       variables:
         BASE_URL:
-          value: "variable1"
+          value: "http://api.duckduckgo.com/?q=the+wire+characters&format=json"
