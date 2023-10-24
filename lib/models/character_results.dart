@@ -105,7 +105,7 @@ class CharacterResults {
 
 class RelatedTopics {
   String? firstURL;
-  Icon? icon;
+  CharacterIcon? icon;
   String? result;
   String? text;
 
@@ -113,7 +113,7 @@ class RelatedTopics {
 
   RelatedTopics.fromJson(Map<String, dynamic> json) {
     firstURL = json['FirstURL'];
-    icon = json['Icon'] != null ? new Icon.fromJson(json['Icon']) : null;
+    icon = json['Icon'] != null ? new CharacterIcon.fromJson(json['Icon']) : null;
     result = json['Result'];
     text = json['Text'];
   }
@@ -130,14 +130,14 @@ class RelatedTopics {
   }
 }
 
-class Icon {
+class CharacterIcon {
   String? height;
   String? uRL;
   String? width;
 
-  Icon({this.height, this.uRL, this.width});
+  CharacterIcon({this.height, this.uRL, this.width});
 
-  Icon.fromJson(Map<String, dynamic> json) {
+  CharacterIcon.fromJson(Map<String, dynamic> json) {
     height = json['Height'];
     uRL = json['URL'];
     width = json['Width'];
