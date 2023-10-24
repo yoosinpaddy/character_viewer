@@ -17,7 +17,7 @@ flutter pub run flutter_launcher_icons
 ```
 
 ### 3. Running specific flavor
-To run any flaver use:
+To run any flavor use:
 ```
 flutter run --flavor simpsons -t lib/main_simpsons.dart
 ```
