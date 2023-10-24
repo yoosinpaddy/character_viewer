@@ -38,6 +38,6 @@ flutter test
 
 ## Screen Recordings
 ### Simpsons
-![Simpsons](./ScreenRecording/low_res.mp4)
+![Simpsons](./ScreenRecording/low_res.gif)
 
 
