@@ -12,3 +12,7 @@ flutter pub run flutter_launcher_icons
 ## Building a specific flavor
 
 There are two flavors in this project: simpson and wire
+To run a flavor
+```
+flutter pub run flutter_flavorizr
+```
