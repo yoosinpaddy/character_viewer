@@ -4,7 +4,7 @@ flavors:
       name: "Simpsons Character Viewer"
 
     android:
-      applicationId: "om.sample.simpsonsviewer"
+      applicationId: "com.sample.simpsonsviewer"
       resValues:
         BASE_URL:
           type: "string"

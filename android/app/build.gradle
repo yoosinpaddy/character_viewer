@@ -30,7 +30,7 @@ android {
     productFlavors {
         simpsons {
             dimension "flavor-type"
-            applicationId "om.sample.simpsonsviewer"
+            applicationId "com.sample.simpsonsviewer"
             resValue "string", "app_name", "Simpsons Character Viewer"
             resValue "string", "BASE_URL", "http://api.duckduckgo.com/?q=simpsons+characters&format=json"
         }
