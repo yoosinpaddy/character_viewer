@@ -22,6 +22,9 @@ class Utils {
                   onPressed: () => provider.hideDetails(),
                   icon: const Icon(Icons.arrow_back),
                 ),
+                CircleAvatar(
+                  backgroundImage: NetworkImage(getIconLink(provider.selectedCharacter?.icon?.uRL)),
+                ),
                 Expanded(
                   child: Container(),
                 )
