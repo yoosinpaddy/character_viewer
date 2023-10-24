@@ -89,6 +89,7 @@ class SummaryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: provider.displayCharacters.length,
+
       itemBuilder: (BuildContext context, int index) {
         RelatedTopics character = provider.displayCharacters[index];
         return InkWell(
@@ -97,6 +98,11 @@ class SummaryWidget extends StatelessWidget {
           },
           child: Container(
             padding: const EdgeInsets.all(10.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: provider.selectedCharacter == character ? Colors.grey : Colors.white,
+            ),
+            margin: const EdgeInsets.only(bottom: 10.0),
             child: Row(
               children: [
                 //image and summary
