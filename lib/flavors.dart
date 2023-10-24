@@ -8,6 +8,11 @@ class F {
 
   static String get name => appFlavor?.name ?? '';
 
+  //setting flavor only for tests
+  static void setAppFlavor(Flavor flavor) {
+    appFlavor = flavor;
+  }
+
   static String get title {
     switch (appFlavor) {
       case Flavor.simpsons:
