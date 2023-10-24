@@ -33,7 +33,6 @@ void main() {
   });
 
   test('Base urls', () {
-
     F.setAppFlavor(Flavor.simpsons);
     expect(F.BASE_URL, 'http://api.duckduckgo.com/?q=simpsons+characters&format=json');
     F.setAppFlavor(Flavor.wire);
