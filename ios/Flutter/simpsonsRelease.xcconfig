@@ -1,0 +1,7 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main_simpsons.dart
+ASSET_PREFIX=simpsons
+BUNDLE_NAME=Simpsons Character Viewer
+BUNDLE_DISPLAY_NAME=Simpsons Character Viewer
+BASE_URL=http://api.duckduckgo.com/?q=simpsons+characters&format=json
