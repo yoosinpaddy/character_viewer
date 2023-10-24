@@ -43,7 +43,13 @@ class Utils {
                         decoration: const InputDecoration(
                           hintText: 'Search',
                           border: InputBorder.none,
+                          focusColor: Colors.white,
+                          labelStyle: TextStyle(color: Colors.white,),
+                          hintStyle: TextStyle(color: Colors.white,),
+                          counterStyle: TextStyle(color: Colors.white,),
                         ),
+                        style: const TextStyle(color: Colors.white,),
+                        focusNode: FocusNode(),
                         controller: _searchController,
                       ),
                     ),

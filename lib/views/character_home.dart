@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:character_viewer/flavors.dart';
 import 'package:character_viewer/models/character_results.dart';
 import 'package:character_viewer/view_models/character_provider.dart';
 import 'package:character_viewer/view_models/utils.dart';
@@ -16,7 +15,6 @@ class CharacterHome extends StatefulWidget {
 }
 
 class _CharacterHomeState extends State<CharacterHome> {
-  bool _isSearching = false;
   TextEditingController _searchController = TextEditingController();
   RelatedTopics? selectedCharacter;
 
@@ -37,18 +35,13 @@ class _CharacterHomeState extends State<CharacterHome> {
       } else {
         selectedCharacter ??= provider.displayCharacters.first;
       }
-      return Scaffold(
-        appBar: Utils.buildAppBar(provider, _searchController),
-        body: OrientationBuilder(
-          builder: (BuildContext context, Orientation orientation) {
-            provider.toggleTablet(orientation == Orientation.landscape || MediaQuery.of(context).size.width > 600);
-            if (orientation == Orientation.portrait || !provider.isTablet) {
-              return _buildPortrait(provider);
-            } else {
-              return _buildLandscape(provider);
-            }
-          },
-        ),
+      return OrientationBuilder(
+        builder: (BuildContext context, Orientation orientation) {
+          provider.toggleTablet(orientation == Orientation.landscape || MediaQuery.of(context).size.width > 600);
+          return Scaffold(
+              appBar: Utils.buildAppBar(provider, _searchController),
+              body: (orientation == Orientation.portrait || !provider.isTablet) ? _buildPortrait(provider) : _buildLandscape(provider));
+        },
       );
     });
   }
@@ -56,9 +49,8 @@ class _CharacterHomeState extends State<CharacterHome> {
 
 class _buildPortrait extends StatelessWidget {
   final CharacterProvider provider;
-  RelatedTopics? selectedCharacter;
 
-  _buildPortrait(this.provider, {Key? key, this.selectedCharacter}) : super(key: key);
+  _buildPortrait(this.provider, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +82,6 @@ class _buildLandscape extends StatelessWidget {
 
 class SummaryWidget extends StatelessWidget {
   final CharacterProvider provider;
-  Function(RelatedTopics)? onTap;
 
   SummaryWidget(this.provider, {Key? key}) : super(key: key);
 
@@ -122,6 +113,10 @@ class SummaryWidget extends StatelessWidget {
                         character.text ?? '',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: provider.isTablet ? 20.0 : 16.0,
+                          fontWeight: FontWeight.normal,
+                        ),
                       )
                     ],
                   ),
@@ -138,7 +133,7 @@ class SummaryWidget extends StatelessWidget {
 class DetailWidgetWidget extends StatelessWidget {
   final CharacterProvider? provider;
   final WebViewController controller = WebViewController();
-  bool _isLoading = false;
+   bool _isLoading = false;
 
   DetailWidgetWidget(this.provider, {Key? key}) : super(key: key);
 
@@ -163,7 +158,7 @@ class DetailWidgetWidget extends StatelessWidget {
         onPageFinished: (String url) {
           _isLoading = false;
           Future.delayed(const Duration(seconds: 2), () {
-            if(!_isLoading) {
+            if (!_isLoading) {
               EasyLoading.dismiss();
             }
           });

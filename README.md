@@ -25,3 +25,19 @@ flutter run --flavor simpsons -t lib/main_simpsons.dart
 ```
 flutter run --flavor wire -t lib/main_wire.dart
 ```
+
+### 4. Running tests
+To run tests, use:
+```
+flutter test
+```
+
+[//]: # (horizontal line)
+---
+[//]: # (Path: README.md)
+
+## Screen Recordings
+### Simpsons
+![Simpsons](./ScreenRecording/low_res.mp4)
+
+
