@@ -128,6 +128,23 @@ class RelatedTopics {
     data['Text'] = this.text;
     return data;
   }
+
+  String getName() {
+    if (text == null || text?.isEmpty == true) {
+      return '';
+    }else if (text?.contains('-') == false) {
+      return text??'';
+    }else{
+      return text?.split('-')[0].trim()??"";
+    }
+  }
+
+  bool contains(String searchTerm) {
+    if (text == null || text?.isEmpty == true) {
+      return false;
+    }
+    return (text?.toLowerCase().contains(searchTerm.toLowerCase()) == true || result?.toLowerCase().contains(searchTerm.toLowerCase()) == true);
+  }
 }
 
 class CharacterIcon {

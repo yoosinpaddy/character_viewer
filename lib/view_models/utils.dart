@@ -9,7 +9,7 @@ class Utils {
     if (url == null || url.isEmpty) {
       return dummyAvatar;
     }
-    return "https://www.duckduckgo.com$url";
+    return "https://duckduckgo.com$url";
   }
 
   static buildAppBar(CharacterProvider provider, TextEditingController _searchController) {
@@ -25,8 +25,12 @@ class Utils {
                 CircleAvatar(
                   backgroundImage: NetworkImage(getIconLink(provider.selectedCharacter?.icon?.uRL)),
                 ),
+                SizedBox(width: 10.0),
                 Expanded(
-                  child: Container(),
+                  child: Text(
+                    provider.selectedCharacter?.getName()??'',
+                    overflow: TextOverflow.ellipsis,
+                  )
                 )
               ],
             )

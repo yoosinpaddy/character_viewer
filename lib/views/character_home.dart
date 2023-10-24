@@ -106,17 +106,17 @@ class SummaryWidget extends StatelessWidget {
             child: Row(
               children: [
                 //image and summary
-                CircleAvatar(
+                /*CircleAvatar(
                   backgroundImage: CachedNetworkImageProvider(Utils.getIconLink(character.icon?.uRL)),
                 ),
-                const SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),*/
                 //text with one line
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        character.text ?? '',
+                        character.getName(),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(

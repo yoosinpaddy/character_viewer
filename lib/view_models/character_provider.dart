@@ -36,7 +36,7 @@ class CharacterProvider extends ChangeNotifier {
     }
 
     _displayCharacters = _characterResults.relatedTopics!.where((character) {
-      return (character.text?.toLowerCase().contains(searchTerm.toLowerCase()) == true);
+      return character.contains(searchTerm);
     }).toList();
   }
 
