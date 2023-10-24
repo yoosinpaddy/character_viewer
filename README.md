@@ -20,6 +20,8 @@ flutter pub run flutter_launcher_icons
 To run any flaver use:
 ```
 flutter run --flavor simpsons -t lib/main_simpsons.dart
-``` or ```
-flutter run --flavor wire -t lib/main_simpsons.dart
+```
+ or 
+```
+flutter run --flavor wire -t lib/main_wire.dart
 ```
