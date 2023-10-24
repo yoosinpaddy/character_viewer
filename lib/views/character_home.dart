@@ -38,7 +38,7 @@ class _CharacterHomeState extends State<CharacterHome> {
         selectedCharacter ??= provider.displayCharacters.first;
       }
       return Scaffold(
-        appBar: Utils.buildAppBar(provider, _isSearching, _searchController),
+        appBar: Utils.buildAppBar(provider, _searchController),
         body: OrientationBuilder(
           builder: (BuildContext context, Orientation orientation) {
             provider.toggleTablet(orientation == Orientation.landscape || MediaQuery.of(context).size.width > 600);
