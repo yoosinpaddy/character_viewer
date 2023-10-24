@@ -32,9 +32,6 @@ To run tests, use:
 flutter test
 ```
 
-[//]: # (horizontal line)
----
-[//]: # (Path: README.md)
 
 ## Screen Recordings
 ### Simpsons
