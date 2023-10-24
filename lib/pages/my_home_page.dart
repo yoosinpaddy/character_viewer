@@ -10,7 +10,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'Hello ${F.title}',
+          'URL ${F.BASE_URL}',
         ),
       ),
     );

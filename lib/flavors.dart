@@ -18,5 +18,15 @@ class F {
         return 'title';
     }
   }
+  static String get BASE_URL {
+    switch (appFlavor) {
+      case Flavor.simpsons:
+        return 'http://api.duckduckgo.com/?q=simpsons+characters&format=json';
+      case Flavor.wire:
+        return 'http://api.duckduckgo.com/?q=the+wire+characters&format=json';
+      default:
+        return 'title';
+    }
+  }
 
 }
