@@ -1,4 +1,4 @@
-# Character Viewer
+# Character Viewer: Implementing multiple flavors in flutter
 
 A character viewer project with two flavors
 
